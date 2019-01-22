@@ -11,12 +11,11 @@ import Alamofire
 
 
 
-// Datos codables
 struct DataApi: Codable{
     var type: String?
     var name: String?
     var description: String?
-    var _id : String?
+    var idName: String?
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -57,15 +56,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         let dict = laData[indexPath.row]
         
+        //--->Ordenar alfabeticamente
+        
         cell.textLabel?.text = dict.name
         cell.detailTextLabel?.text = dict.type
         
         return cell
     }
     
-
-
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let Detail = UIStoryboard(name: "Main", bundle: nil)
+        let SvC = Detail.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+      
+        self.navigationController?.pushViewController(SvC, animated: true)
+ 
+    }
+    
 
 }
 

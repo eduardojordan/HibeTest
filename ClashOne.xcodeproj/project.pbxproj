@@ -12,6 +12,10 @@
 		A01CC0BC21F77F0600767CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0BA21F77F0600767CD6 /* Main.storyboard */; };
 		A01CC0BE21F77F0900767CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0BD21F77F0900767CD6 /* Assets.xcassets */; };
 		A01CC0C121F77F0900767CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0BF21F77F0900767CD6 /* LaunchScreen.storyboard */; };
+		A01CC0CB21F7B9BA00767CD6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */; };
+		A01CC0CD21F7C71400767CD6 /* arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0CC21F7C71400767CD6 /* arrows.png */; };
+		A01CC0D021F7D4B600767CD6 /* Logo-clash-royale-510x382.png in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0CE21F7D4B600767CD6 /* Logo-clash-royale-510x382.png */; };
+		A01CC0D121F7D4B600767CD6 /* clash logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0CF21F7D4B600767CD6 /* clash logo.jpg */; };
 		BD8F03870B9294C0644DECC7 /* Pods_ClashOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569867CD0BF7FA3553D37553 /* Pods_ClashOne.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		A01CC0BD21F77F0900767CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01CC0C021F77F0900767CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01CC0C221F77F0900767CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = /Users/eduardo/Desktop/ClashOne/ClashOne/SecondViewController.swift; sourceTree = "<absolute>"; };
+		A01CC0CC21F7C71400767CD6 /* arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows.png; sourceTree = "<group>"; };
+		A01CC0CE21F7D4B600767CD6 /* Logo-clash-royale-510x382.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-clash-royale-510x382.png"; sourceTree = "<group>"; };
+		A01CC0CF21F7D4B600767CD6 /* clash logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "clash logo.jpg"; sourceTree = "<group>"; };
 		B34F9875B9E1D0583E246834 /* Pods-ClashOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClashOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClashOne/Pods-ClashOne.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,10 +69,14 @@
 		A01CC0B521F77F0600767CD6 /* ClashOne */ = {
 			isa = PBXGroup;
 			children = (
+				A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */,
 				A01CC0B621F77F0600767CD6 /* AppDelegate.swift */,
 				A01CC0B821F77F0600767CD6 /* ViewController.swift */,
 				A01CC0BA21F77F0600767CD6 /* Main.storyboard */,
 				A01CC0BD21F77F0900767CD6 /* Assets.xcassets */,
+				A01CC0CF21F7D4B600767CD6 /* clash logo.jpg */,
+				A01CC0CE21F7D4B600767CD6 /* Logo-clash-royale-510x382.png */,
+				A01CC0CC21F7C71400767CD6 /* arrows.png */,
 				A01CC0BF21F77F0900767CD6 /* LaunchScreen.storyboard */,
 				A01CC0C221F77F0900767CD6 /* Info.plist */,
 			);
@@ -148,9 +160,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01CC0D021F7D4B600767CD6 /* Logo-clash-royale-510x382.png in Resources */,
 				A01CC0C121F77F0900767CD6 /* LaunchScreen.storyboard in Resources */,
 				A01CC0BE21F77F0900767CD6 /* Assets.xcassets in Resources */,
 				A01CC0BC21F77F0600767CD6 /* Main.storyboard in Resources */,
+				A01CC0CD21F7C71400767CD6 /* arrows.png in Resources */,
+				A01CC0D121F7D4B600767CD6 /* clash logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01CC0CB21F7B9BA00767CD6 /* SecondViewController.swift in Sources */,
 				A01CC0B921F77F0600767CD6 /* ViewController.swift in Sources */,
 				A01CC0B721F77F0600767CD6 /* AppDelegate.swift in Sources */,
 			);

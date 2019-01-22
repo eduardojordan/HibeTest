@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LZj-Nt-jx0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,28 +62,88 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7N6-LM-ulX"/>
                     <connections>
                         <outlet property="tableView" destination="chJ-Vm-75R" id="Svx-E2-2Yc"/>
+                        <segue destination="jUi-gc-WKi" kind="show" identifier="transition" id="kip-Rm-zqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1044" y="-9"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="PBm-aX-lZd">
             <objects>
-                <viewController id="jUi-gc-WKi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jUi-gc-WKi" customClass="SecondViewController" customModule="ClashOne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z0j-gE-rAE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrows.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-MX-s30">
+                                <rect key="frame" x="90" y="100" width="212" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="0Q6-cu-xDj"/>
+                                    <constraint firstAttribute="width" constant="189" id="PQn-tZ-i2L"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-4B-GUP">
+                                <rect key="frame" x="100" y="384" width="192" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTe-g9-Wju">
+                                <rect key="frame" x="100" y="345" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eHN-MX-s30" firstAttribute="top" secondItem="EEG-fR-bk7" secondAttribute="top" constant="36" id="ARz-MS-Z3a"/>
+                            <constraint firstItem="JTe-g9-Wju" firstAttribute="top" secondItem="eHN-MX-s30" secondAttribute="bottom" constant="23" id="bsJ-Xo-C71"/>
+                            <constraint firstItem="Vn6-4B-GUP" firstAttribute="top" secondItem="JTe-g9-Wju" secondAttribute="bottom" constant="18" id="cae-KT-J1Y"/>
+                            <constraint firstItem="EEG-fR-bk7" firstAttribute="trailing" secondItem="Vn6-4B-GUP" secondAttribute="trailing" constant="100" id="eiJ-al-oNo"/>
+                            <constraint firstItem="eHN-MX-s30" firstAttribute="leading" secondItem="EEG-fR-bk7" secondAttribute="leading" constant="90" id="fG2-JF-tSK"/>
+                            <constraint firstItem="EEG-fR-bk7" firstAttribute="trailing" secondItem="eHN-MX-s30" secondAttribute="trailing" constant="90" id="fLW-w7-knu"/>
+                            <constraint firstItem="Vn6-4B-GUP" firstAttribute="leading" secondItem="EEG-fR-bk7" secondAttribute="leading" constant="100" id="lvs-OZ-Yoh"/>
+                            <constraint firstItem="EEG-fR-bk7" firstAttribute="trailing" secondItem="JTe-g9-Wju" secondAttribute="trailing" constant="100" id="mVu-Hg-LnT"/>
+                            <constraint firstItem="JTe-g9-Wju" firstAttribute="leading" secondItem="EEG-fR-bk7" secondAttribute="leading" constant="100" id="xz0-OP-Xxp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EEG-fR-bk7"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Vn6-4B-GUP" id="ohE-iC-ZXM"/>
+                        <outlet property="imageLink" destination="eHN-MX-s30" id="yla-p1-wPU"/>
+                        <outlet property="nameLabel" destination="JTe-g9-Wju" id="qA3-vy-tBS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPy-de-hwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="26"/>
+            <point key="canvasLocation" x="1922" y="-9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uZE-je-KpY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LZj-Nt-jx0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxX-Qo-8Ji">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EOj-Mf-Xde"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3v-EJ-FFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrows.png" width="212" height="263"/>
+    </resources>
 </document>
