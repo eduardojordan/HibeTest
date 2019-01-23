@@ -13,10 +13,12 @@ import Alamofire
 
 struct DataApi: Codable{
     var type: String?
-    var name: String?
+    var name: String
     var description: String?
     var idName: String?
 }
+
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -27,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var laData = [DataApi]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 self.laData = try decoder.decode([DataApi].self, from: json!)
                 if self.laData.count > 0{
-                self.tableView.reloadData()
+                 self.laData.sort( by: { $0.name < $1.name } )
+                 self.tableView.reloadData()
                    
                 }
             }catch let err{
@@ -48,13 +51,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    }
     
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return self.laData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        
+   //   laData.sort( by: { $0.name < $1.name } )
+        
+       
+        
         let dict = laData[indexPath.row]
         
         //--->Ordenar alfabeticamente
@@ -64,7 +71,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //  Get Image from Api
         let url = URL(string: API_URL_IMAGE+(dict.idName!)+".png")
-        print(url)
                 if  url == nil {
                    cell.imageView?.image = UIImage(named: "placeholder.png")
                 }else{
@@ -83,10 +89,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationController?.pushViewController(SvC, animated: true)
  
     }
-    
-    
-    
 
+    
 }
 
 private extension UIImageView{
@@ -99,3 +103,4 @@ private extension UIImageView{
         }
 }
 }
+
