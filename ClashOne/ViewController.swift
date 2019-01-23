@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     let API_URL = "http://www.clashapi.xyz/api/cards"
+    let API_URL_IMAGE = "http://www.clashapi.xyz/images/cards/"
     
     var laData = [DataApi]()
     
@@ -61,6 +62,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = dict.name
         cell.detailTextLabel?.text = dict.type
         
+        //  Get Image from Api
+        let url = URL(string: API_URL_IMAGE+(dict.idName!)+".png")
+        print(url)
+                if  url == nil {
+                   cell.imageView?.image = UIImage(named: "placeholder.png")
+                }else{
+                    DispatchQueue.main.async {
+                        cell.imageView?.setImage(with: url!)
+                    }
+                        }
+        
         return cell
     }
     
@@ -72,6 +84,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
  
     }
     
+    
+    
 
 }
 
+private extension UIImageView{
+    func setImage(with url:URL){
+        Alamofire.request(url).responseData { (response) in
+            let image = UIImage(data: response.data!)
+            DispatchQueue.main.async {
+                self.image = image
+            }
+        }
+}
+}
