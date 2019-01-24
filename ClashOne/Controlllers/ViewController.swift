@@ -40,6 +40,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(err)
             }
         }
+        
+      
+        
    }
     
     
@@ -80,7 +83,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
 
         SvC.name = laData[indexPath.row].name
-        SvC.descriptions = laData[indexPath.row].description!
+        
+       // Corrección BUG,  falta descripción en personaje "BARBARIAN BARREL" en JSON
+        if SvC.descriptions.isEmpty {
+            SvC.descriptions = "Sin descripción en JSON"
+            print(SvC.descriptions)
+            print("No tiene descripcion")
+           print("----------->",SvC.descriptions)
+        }else{
+            SvC.descriptions = laData[indexPath.row].description!
+}
+        
         self.navigationController?.pushViewController(SvC, animated: true)
  
     }
