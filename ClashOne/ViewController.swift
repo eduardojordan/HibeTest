@@ -57,14 +57,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-        
-   //   laData.sort( by: { $0.name < $1.name } )
-        
-       
-        
+   
         let dict = laData[indexPath.row]
-        
-        //--->Ordenar alfabeticamente
         
         cell.textLabel?.text = dict.name
         cell.detailTextLabel?.text = dict.type
@@ -85,12 +79,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let Detail = UIStoryboard(name: "Main", bundle: nil)
         let SvC = Detail.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-      
+    
+        
+        let url = URL(string:API_URL_IMAGE+(laData[indexPath.row].idName!)+".png")
+        let data = try? Data(contentsOf: url!)
+        if let imageData = data {
+            SvC.image = UIImage(data: imageData)!
+        }
+
+        SvC.name = laData[indexPath.row].name
+        SvC.descriptions = laData[indexPath.row].description!
         self.navigationController?.pushViewController(SvC, animated: true)
  
     }
 
-    
 }
 
 private extension UIImageView{
