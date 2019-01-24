@@ -106,3 +106,4 @@ private extension UIImageView{
 }
 }
 
+// Posibles Mejoras: incluir una barra de busqueda en la parte superior
