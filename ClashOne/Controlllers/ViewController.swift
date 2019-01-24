@@ -84,15 +84,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         SvC.name = laData[indexPath.row].name
         
-       // Corrección BUG,  falta descripción en personaje "BARBARIAN BARREL" en JSON
-        if SvC.descriptions.isEmpty {
-            SvC.descriptions = "Sin descripción en JSON"
-            print(SvC.descriptions)
-            print("No tiene descripcion")
-        }else{
-            SvC.descriptions = laData[indexPath.row].description!
-}
-        
+
+        SvC.descriptions = laData[indexPath.row].description!
         self.navigationController?.pushViewController(SvC, animated: true)
  
     }
