@@ -85,7 +85,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         SvC.name = laData[indexPath.row].name
         
 
-        SvC.descriptions = laData[indexPath.row].description!
+      
+        
+// FIX BUG -> El JSON no tiene "key" datos en el personaje "Barbarian barrel"
+        if (laData[indexPath.row].description)  != nil{
+           SvC.descriptions = laData[indexPath.row].description!
+        }else{
+            SvC.descriptions = "Sin datos en el JSON"
+        }
+        
+
+        
+        
         self.navigationController?.pushViewController(SvC, animated: true)
  
     }
