@@ -89,7 +89,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             SvC.descriptions = "Sin descripción en JSON"
             print(SvC.descriptions)
             print("No tiene descripcion")
-           print("----------->",SvC.descriptions)
         }else{
             SvC.descriptions = laData[indexPath.row].description!
 }
