@@ -84,21 +84,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrows.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-MX-s30">
-                                <rect key="frame" x="90" y="100" width="195" height="222"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-MX-s30">
+                                <rect key="frame" x="90" y="100" width="164" height="222"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="222" id="0Q6-cu-xDj"/>
                                     <constraint firstAttribute="width" constant="189" id="PQn-tZ-i2L"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-4B-GUP">
-                                <rect key="frame" x="100" y="385" width="175" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-4B-GUP">
+                                <rect key="frame" x="100" y="385" width="144" height="17"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTe-g9-Wju">
-                                <rect key="frame" x="100" y="345" width="175" height="22"/>
+                                <rect key="frame" x="100" y="345" width="144" height="22"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="22"/>
                                 <color key="textColor" red="1" green="0.11957620619999999" blue="0.092107143119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -229,7 +229,6 @@
     </scenes>
     <resources>
         <image name="Logo-clash-royale-510x382.png" width="510" height="382"/>
-        <image name="arrows.png" width="212" height="263"/>
         <image name="placeholder" width="28.5" height="27.5"/>
     </resources>
 </document>
