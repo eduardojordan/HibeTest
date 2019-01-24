@@ -11,14 +11,6 @@ import Alamofire
 
 
 
-struct DataApi: Codable{
-    var type: String?
-    var name: String
-    var description: String?
-    var idName: String?
-}
-
-
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    

@@ -12,6 +12,7 @@
 		A01CC0BC21F77F0600767CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0BA21F77F0600767CD6 /* Main.storyboard */; };
 		A01CC0C121F77F0900767CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01CC0BF21F77F0900767CD6 /* LaunchScreen.storyboard */; };
 		A01CC0CB21F7B9BA00767CD6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */; };
+		A026E0FF21FA16FC004C7F9B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026E0FE21FA16FC004C7F9B /* Model.swift */; };
 		A087E8F621F9CEF40001FEDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A087E8F521F9CEF40001FEDD /* Assets.xcassets */; };
 		BD8F03870B9294C0644DECC7 /* Pods_ClashOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569867CD0BF7FA3553D37553 /* Pods_ClashOne.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		A01CC0C021F77F0900767CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01CC0C221F77F0900767CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = /Users/eduardo/Desktop/ClashOne/ClashOne/SecondViewController.swift; sourceTree = "<absolute>"; };
+		A026E0FE21FA16FC004C7F9B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A087E8F521F9CEF40001FEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B34F9875B9E1D0583E246834 /* Pods-ClashOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClashOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClashOne/Pods-ClashOne.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +65,32 @@
 		A01CC0B521F77F0600767CD6 /* ClashOne */ = {
 			isa = PBXGroup;
 			children = (
+				A026E10121FA1796004C7F9B /* Controlllers */,
+				A026E10021FA1783004C7F9B /* Model */,
 				A01CC0B621F77F0600767CD6 /* AppDelegate.swift */,
-				A01CC0B821F77F0600767CD6 /* ViewController.swift */,
-				A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */,
 				A01CC0BA21F77F0600767CD6 /* Main.storyboard */,
 				A01CC0BF21F77F0900767CD6 /* LaunchScreen.storyboard */,
 				A087E8F521F9CEF40001FEDD /* Assets.xcassets */,
 				A01CC0C221F77F0900767CD6 /* Info.plist */,
 			);
 			path = ClashOne;
+			sourceTree = "<group>";
+		};
+		A026E10021FA1783004C7F9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A026E0FE21FA16FC004C7F9B /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A026E10121FA1796004C7F9B /* Controlllers */ = {
+			isa = PBXGroup;
+			children = (
+				A01CC0B821F77F0600767CD6 /* ViewController.swift */,
+				A01CC0CA21F7B9BA00767CD6 /* SecondViewController.swift */,
+			);
+			path = Controlllers;
 			sourceTree = "<group>";
 		};
 		DED99254B80F26C177C5CFA6 /* Frameworks */ = {
@@ -208,6 +227,7 @@
 				A01CC0CB21F7B9BA00767CD6 /* SecondViewController.swift in Sources */,
 				A01CC0B921F77F0600767CD6 /* ViewController.swift in Sources */,
 				A01CC0B721F77F0600767CD6 /* AppDelegate.swift in Sources */,
+				A026E0FF21FA16FC004C7F9B /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
